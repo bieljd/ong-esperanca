@@ -59,6 +59,12 @@ ong-esperanca/
 - Página de projetos com filtros por categoria
 - Cadastro completo de voluntários
 
+## 🤝 Como contribuir
+
+- Crie uma branch seguindo o fluxo GitFlow antes de iniciar uma alteração.
+- Use commits semânticos, como `feat:`, `fix:` e `docs:`.
+- Consulte as issues abertas para encontrar tarefas e propor melhorias.
+
 ## 👤 Autor
 
 Seu nome aqui

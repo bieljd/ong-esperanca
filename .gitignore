@@ -1,0 +1,12 @@
+node_modules/
+assets/js/dist/
+*.js.map
+.vscode/
+.idea/
+.env
+.env.local
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+.vercel

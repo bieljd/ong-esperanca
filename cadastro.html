@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cadastre-se para ser voluntário do Instituto Maré Azul e ajude a preservar praias, rios e comunidades costeiras.">
+  <meta name="theme-color" content="#0B4F8A">
+
+  <meta property="og:title" content="Seja voluntário — Instituto Maré Azul">
+  <meta property="og:description" content="Cadastre-se para ser voluntário do Instituto Maré Azul e ajude a preservar praias, rios e comunidades costeiras.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <title>Seja voluntário — Instituto Maré Azul</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/form.css">
+  <script>
+    (function() {
+      try {
+        var tema = localStorage.getItem("mare-azul-tema");
+        if (tema === '"escuro"' || tema === 'escuro') document.documentElement.classList.add("tema-escuro");
+        if (tema === '"claro"' || tema === 'claro') document.documentElement.classList.add("tema-claro");
+      } catch(e) {}
+    })();
+  </script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Instituto Maré Azul — página inicial">
+        <span class="logo-marca" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2"/>
+            <path d="M2 18c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2"/>
+            <circle cx="12" cy="5" r="2"/>
+          </svg>
+        </span>
+        <span class="logo-texto">
+          <span>Instituto</span>
+          <strong>Maré Azul</strong>
+        </span>
+      </a>
+      <button type="button" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-principal">
+        <span aria-hidden="true">☰</span>
+      </button>
+      <nav class="nav-principal" id="nav-principal" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="cadastro.html" class="btn btn-cta btn-nav" aria-current="page">Quero ajudar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="breadcrumb">
+          <a href="index.html">Início</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Cadastro</span>
+        </nav>
+        <h1>Seja um voluntário</h1>
+        <p class="lead">Preencha o formulário abaixo. Leva menos de 2 minutos — e sua ajuda dura a vida inteira.</p>
+      </div>
+    </section>
+
+    <section class="section form-section">
+      <div class="container container--narrow">
+        <form id="form-cadastro" novalidate autocomplete="on">
+          <fieldset class="form-bloco">
+            <legend>Dados pessoais</legend>
+
+            <div class="form-grupo">
+              <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+              <input type="text" id="nome" name="nome" required minlength="3" maxlength="80" autocomplete="name" placeholder="Seu nome completo" pattern="[A-Za-zÀ-ÿ\s]{3,80}" title="Informe seu nome completo (mínimo 3 caracteres)" aria-describedby="help-nome error-nome">
+              <small class="help" id="help-nome">Mínimo 3 caracteres.</small>
+              <span class="error" id="error-nome" role="alert"></span>
+            </div>
+
+            <div class="form-grupo">
+              <label for="cpf">CPF <span aria-hidden="true">*</span></label>
+              <input type="text" id="cpf" name="cpf" required maxlength="14" minlength="14" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o CPF no formato 000.000.000-00" aria-describedby="help-cpf error-cpf">
+              <small class="help" id="help-cpf">Somente números.</small>
+              <span class="error" id="error-cpf" role="alert"></span>
+            </div>
+
+            <div class="form-grupo">
+              <label for="nascimento">Data de nascimento <span aria-hidden="true">*</span></label>
+              <input type="date" id="nascimento" name="nascimento" required autocomplete="bday" aria-describedby="error-nascimento">
+              <span class="error" id="error-nascimento" role="alert"></span>
+            </div>
+
+            <div class="form-grupo">
+              <label for="email">E-mail <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" placeholder="voce@email.com" aria-describedby="error-email">
+              <span class="error" id="error-email" role="alert"></span>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-bloco">
+            <legend>Contato</legend>
+
+            <div class="form-grupo">
+              <label for="telefone">Celular <span aria-hidden="true">*</span></label>
+              <input type="tel" id="telefone" name="telefone" required maxlength="15" minlength="14" inputmode="numeric" autocomplete="tel" placeholder="(00) 00000-0000" pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}" title="Digite o telefone no formato (00) 00000-0000" aria-describedby="help-telefone error-telefone">
+              <small class="help" id="help-telefone">Use o formato (00) 00000-0000.</small>
+              <span class="error" id="error-telefone" role="alert"></span>
+            </div>
+
+            <div class="form-grupo">
+              <label for="cep">CEP <span aria-hidden="true">*</span></label>
+              <input type="text" id="cep" name="cep" required maxlength="9" minlength="9" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" pattern="\d{5}-\d{3}" title="Digite o CEP no formato 00000-000" aria-describedby="help-cep error-cep">
+              <small class="help" id="help-cep">Use o formato 00000-000.</small>
+              <span class="error" id="error-cep" role="alert"></span>
+            </div>
+
+            <div class="form-grupo form-grupo--full">
+              <label for="endereco">Endereço</label>
+              <input type="text" id="endereco" name="endereco" readonly aria-readonly="true" placeholder="Preenchido automaticamente pelo CEP">
+            </div>
+
+            <div class="form-grupo">
+              <label for="cidade">Cidade</label>
+              <input type="text" id="cidade" name="cidade" readonly>
+            </div>
+
+            <div class="form-grupo">
+              <label for="uf">UF</label>
+              <input type="text" id="uf" name="uf" readonly maxlength="2">
+            </div>
+          </fieldset>
+
+          <fieldset class="form-bloco">
+            <legend>Preferências</legend>
+
+            <div class="form-grupo form-grupo--full">
+              <label for="area">Área de interesse <span aria-hidden="true">*</span></label>
+              <select id="area" name="area" required aria-describedby="error-area">
+                <option value="">Selecione uma área</option>
+                <option value="educacao">Educação ambiental</option>
+                <option value="limpeza">Mutirões de limpeza</option>
+                <option value="renda">Capacitação / geração de renda</option>
+                <option value="saude">Saúde comunitária</option>
+                <option value="administrativo">Apoio administrativo</option>
+              </select>
+              <span class="error" id="error-area" role="alert"></span>
+            </div>
+
+            <div class="form-grupo form-grupo--full">
+              <span class="form-label">Disponibilidade</span>
+              <div class="checkbox-grupo" role="group" aria-label="Disponibilidade">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="disponibilidade" value="manha">
+                  <span>Manhã</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="disponibilidade" value="tarde">
+                  <span>Tarde</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="disponibilidade" value="noite">
+                  <span>Noite</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="disponibilidade" value="fim-semana">
+                  <span>Fins de semana</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-grupo form-grupo--full">
+              <label for="motivacao">Por que quer participar?</label>
+              <textarea id="motivacao" name="motivacao" maxlength="500" rows="4" placeholder="Conte um pouco do que te motiva (opcional)" aria-describedby="contador-motivacao"></textarea>
+              <small class="help"><span id="contador-motivacao">0</span> / 500 caracteres</small>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-bloco">
+            <legend>Consentimento</legend>
+
+            <label class="checkbox-item checkbox-item--destaque" for="termos">
+              <input type="checkbox" id="termos" name="termos" required>
+              <span>Li e aceito os <a href="#">termos de uso</a> e a <a href="#">política de privacidade</a>. <span aria-hidden="true">*</span></span>
+            </label>
+            <span class="error" id="error-termos" role="alert"></span>
+
+            <label class="checkbox-item" for="newsletter">
+              <input type="checkbox" id="newsletter" name="newsletter">
+              <span>Quero receber novidades por e-mail</span>
+            </label>
+          </fieldset>
+
+          <div id="alerta-geral" role="alert" aria-live="polite" class="alerta-geral" hidden></div>
+
+          <div class="form-acoes">
+            <button type="submit" class="btn btn-primary">Enviar cadastro</button>
+            <button type="reset" class="btn btn-ghost">Limpar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="footer-logo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 12c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2" />
+              <path d="M2 18c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2" />
+              <circle cx="12" cy="5" r="2" />
+            </svg>
+            <strong>Instituto Maré Azul</strong>
+          </a>
+          <p>Organização sem fins lucrativos dedicada à preservação costeira e à capacitação de comunidades pesqueiras do litoral brasileiro.</p>
+          <p class="footer-meta">CNPJ 12.345.678/0001-90<br>Rua do Porto, 142 — Santos, SP</p>
+        </div>
+        <div>
+          <h3>Navegação</h3>
+          <a href="index.html">Início</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="cadastro.html">Seja voluntário</a>
+          <a href="#">Relatório anual</a>
+          <a href="#">Transparência</a>
+        </div>
+        <div>
+          <h3>Contato</h3>
+          <a href="mailto:contato@mareazul.org.br">contato@mareazul.org.br</a>
+          <a href="tel:+5513999999999">+55 (13) 99999-9999</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Instituto Maré Azul. Todos os direitos reservados.</p>
+        <p>Feito com responsabilidade em Santos, SP.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/dist/menu.js"></script>
+  <script type="module" src="assets/js/dist/header.js"></script>
+  <script type="module" src="assets/js/dist/reveal.js"></script>
+  <script type="module" src="assets/js/dist/form.js"></script>
+  <script type="module" src="assets/js/dist/rascunho.js"></script>
+  <script type="module" src="assets/js/dist/spa.js"></script>
+  <script type="module" src="assets/js/dist/tema.js"></script>
+</body>
+
+</html>

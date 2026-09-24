@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Instituto Maré Azul — ONG dedicada à limpeza de praias e rios e capacitação de comunidades costeiras.">
+  <meta name="theme-color" content="#0B4F8A">
+
+  <meta property="og:title" content="Instituto Maré Azul — Cuidar do mar é cuidar de todos">
+  <meta property="og:description" content="Instituto Maré Azul — ONG dedicada à limpeza de praias e rios e capacitação de comunidades costeiras.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <title>Instituto Maré Azul — Cuidar do mar é cuidar de todos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js" defer></script>
+  <script>
+    (function() {
+      try {
+        var tema = localStorage.getItem("mare-azul-tema");
+        if (tema === '"escuro"' || tema === 'escuro') document.documentElement.classList.add("tema-escuro");
+        if (tema === '"claro"' || tema === 'claro') document.documentElement.classList.add("tema-claro");
+      } catch(e) {}
+    })();
+  </script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Instituto Maré Azul — página inicial">
+        <span class="logo-marca" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2"/>
+            <path d="M2 18c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2"/>
+            <circle cx="12" cy="5" r="2"/>
+          </svg>
+        </span>
+        <span class="logo-texto">
+          <span>Instituto</span>
+          <strong>Maré Azul</strong>
+        </span>
+      </a>
+      <button type="button" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-principal">
+        <span aria-hidden="true">☰</span>
+      </button>
+      <nav class="nav-principal" id="nav-principal" aria-label="Navegação principal">
+        <a href="index.html" aria-current="page">Início</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="cadastro.html" class="btn btn-cta btn-nav">Quero ajudar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Instituto Maré Azul · desde 2018</p>
+
+          <h1>
+            Preservar o mar é <em>infraestrutura</em> para a vida.
+          </h1>
+
+          <p class="lead">
+            Atuamos na recuperação de praias e rios do litoral paulista,
+            na capacitação de comunidades pesqueiras e na formação de
+            jovens em educação ambiental.
+          </p>
+
+          <div class="hero-acoes">
+            <a href="cadastro.html" class="btn btn-cta">Quero ser voluntário</a>
+            <a href="projetos.html" class="btn btn-ghost">Ver projetos</a>
+          </div>
+
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-slideshow" id="hero-slideshow">
+            <div class="hero-slide ativo" style="background-image: url('https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=1000&q=85&auto=format&fit=crop')"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1000&q=85&auto=format&fit=crop')"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=1000&q=85&auto=format&fit=crop')"></div>
+            <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1000&q=85&auto=format&fit=crop')"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="missao">
+      <div class="container">
+        <header class="section-header">
+          <h2>Nossa missão em três frentes</h2>
+          <p>Atuamos onde a preservação ambiental encontra a geração de renda.</p>
+        </header>
+        <div class="cards-grid">
+          <article class="card">
+            <span class="card-icone" aria-hidden="true">🌊</span>
+            <h3>Preservação</h3>
+            <p>Mutirões mensais de limpeza em praias e rios, com monitoramento contínuo dos resíduos recolhidos.</p>
+          </article>
+          <article class="card">
+            <span class="card-icone" aria-hidden="true">🎣</span>
+            <h3>Geração de renda</h3>
+            <p>Capacitação de pescadores artesanais e catadores para o turismo sustentável e a economia circular.</p>
+          </article>
+          <article class="card">
+            <span class="card-icone" aria-hidden="true">📚</span>
+            <h3>Educação</h3>
+            <p>Programa “Jovens Guardiões do Mar” em escolas públicas costeiras, formando cidadãos conscientes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt impacto" id="impacto">
+      <div class="container impacto-grid">
+        <div class="impacto-conteudo">
+          <header class="section-header">
+            <p class="section-eyebrow">Impacto acumulado</p>
+            <h2>Resultados auditados desde 2018.</h2>
+            <p>Todos os números são verificados e publicados anualmente em nosso relatório de transparência.</p>
+          </header>
+
+          <dl class="stats-grid">
+            <div class="stat-item">
+              <dd class="stat-numero" data-contador="128" data-sufixo="t">0</dd>
+              <dt class="stat-label">Toneladas recolhidas</dt>
+            </div>
+            <div class="stat-item">
+              <dd class="stat-numero" data-contador="42">0</dd>
+              <dt class="stat-label">Praias atendidas</dt>
+            </div>
+            <div class="stat-item">
+              <dd class="stat-numero" data-contador="1850">0</dd>
+              <dt class="stat-label">Voluntários ativos</dt>
+            </div>
+            <div class="stat-item">
+              <dd class="stat-numero" data-contador="16">0</dd>
+              <dt class="stat-label">Comunidades parceiras</dt>
+            </div>
+          </dl>
+
+          <div class="grafico-bloco" aria-labelledby="titulo-grafico">
+            <header class="grafico-header">
+              <h3 id="titulo-grafico">Evolução anual do impacto</h3>
+              <p>Toneladas de resíduos recolhidos por ano, desde 2018.</p>
+            </header>
+            <div class="grafico-wrapper">
+              <canvas id="grafico-impacto"
+                      role="img"
+                      aria-label="Gráfico de linha mostrando a evolução de toneladas recolhidas por ano, de 2018 a 2026"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <figure class="impacto-imagem">
+          <img src="assets/img/mutirao-praia.jpg" alt="Duas crianças celebrando com um high-five na praia após mutirão de limpeza" loading="lazy" width="800" height="800">
+        </figure>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-final">
+          <div class="cta-decor cta-decor--1" aria-hidden="true"></div>
+          <div class="cta-decor cta-decor--2" aria-hidden="true"></div>
+
+          <div class="cta-conteudo">
+            <h2>Pronto pra fazer parte?</h2>
+
+            <p>
+              Sua hora pode transformar uma praia, uma comunidade e uma vida.
+              Junte-se a <strong>1.850 voluntários</strong> que já arregaçaram as mangas.
+            </p>
+
+            <div class="cta-acoes">
+              <a href="cadastro.html" class="btn btn-cta btn-cta--grande">Quero me cadastrar</a>
+              <a href="projetos.html" class="btn btn-outline-claro">Conhecer os projetos</a>
+            </div>
+
+            <ul class="cta-provas" role="list">
+              <li>
+                <span class="cta-provas-icone" aria-hidden="true">✓</span>
+                Sem mensalidade
+              </li>
+              <li>
+                <span class="cta-provas-icone" aria-hidden="true">✓</span>
+                Você escolhe a disponibilidade
+              </li>
+              <li>
+                <span class="cta-provas-icone" aria-hidden="true">✓</span>
+                Treinamento incluso
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="footer-logo">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 12c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2" />
+              <path d="M2 18c2 0 3-2 5-2s3 2 5 2 3-2 5-2 3 2 5 2" />
+              <circle cx="12" cy="5" r="2" />
+            </svg>
+            <strong>Instituto Maré Azul</strong>
+          </a>
+          <p>Organização sem fins lucrativos dedicada à preservação costeira e à capacitação de comunidades pesqueiras do litoral brasileiro.</p>
+          <p class="footer-meta">CNPJ 12.345.678/0001-90<br>Rua do Porto, 142 — Santos, SP</p>
+        </div>
+        <div>
+          <h3>Navegação</h3>
+          <a href="index.html">Início</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="cadastro.html">Seja voluntário</a>
+          <a href="#">Relatório anual</a>
+          <a href="#">Transparência</a>
+        </div>
+        <div>
+          <h3>Contato</h3>
+          <a href="mailto:contato@mareazul.org.br">contato@mareazul.org.br</a>
+          <a href="tel:+5513999999999">+55 (13) 99999-9999</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Instituto Maré Azul. Todos os direitos reservados.</p>
+        <p>Feito com responsabilidade em Santos, SP.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/js/dist/main.js"></script>
+  <script type="module" src="assets/js/dist/slideshow.js"></script>
+  <script type="module" src="assets/js/dist/menu.js"></script>
+  <script type="module" src="assets/js/dist/header.js"></script>
+  <script type="module" src="assets/js/dist/reveal.js"></script>
+  <script type="module" src="assets/js/dist/spa.js"></script>
+  <script type="module" src="assets/js/dist/tema.js"></script>
+  <script type="module" src="assets/js/dist/grafico.js"></script>
+</body>
+
+</html>
